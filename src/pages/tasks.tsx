@@ -1,13 +1,23 @@
-import { selectFilter, selectTasks } from "@/redux/features/task/taskSlice";
+import { AddTaskModal } from "@/module/tasks/AddTaskModal";
+import TaskCard from "@/module/tasks/TaskCard";
+import { selectTasks } from "@/redux/features/task/taskSlice";
 import { useAppSelector } from "@/redux/hook";
 
 export default function Tasks() {
   const tasks = useAppSelector(selectTasks);
-  const filter = useAppSelector(selectFilter);
-  console.log(tasks, filter);
+
+  console.log(tasks);
   return (
-    <div>
-      <h1>This is Tasks Component</h1>
+    <div className="mx-auto max-w-7xl px-5 mt-20">
+      <div className="flex justify-between items-center">
+        <h1>Tasks</h1>
+        <AddTaskModal></AddTaskModal>
+      </div>
+      <div className="space-y-5 mt-5">
+        {tasks.map((task) => (
+          <TaskCard task={task} key={task.id}></TaskCard>
+        ))}
+      </div>
     </div>
   );
 }
