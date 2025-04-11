@@ -22,9 +22,9 @@ export default function TaskCard({ task }: IProps) {
         <div className="flex items-center gap-2">
           <div
             className={cn("size-3 rounded-full", {
-              " bg-green-500": task.priority === "Low",
-              " bg-yellow-500": task.priority === "Medium",
-              " bg-red-500": task.priority === "High",
+              " bg-green-500": task.priority === "low",
+              " bg-yellow-500": task.priority === "medium",
+              " bg-red-500": task.priority === "high",
             })}
           ></div>
           <h1 className={cn({ "line-through": task.isCompleted })}>

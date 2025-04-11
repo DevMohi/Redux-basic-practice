@@ -105,9 +105,9 @@ export function AddTaskModal() {
                       <SelectContent>
                         <SelectGroup>
                           <SelectLabel>Priority</SelectLabel>
-                          <SelectItem value="Low">Low</SelectItem>
-                          <SelectItem value="Medium">Medium</SelectItem>
-                          <SelectItem value="High">High</SelectItem>
+                          <SelectItem value="low">Low</SelectItem>
+                          <SelectItem value="medium">Medium</SelectItem>
+                          <SelectItem value="high">High</SelectItem>
                         </SelectGroup>
                       </SelectContent>
                     </Select>

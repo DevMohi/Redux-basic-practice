@@ -6,6 +6,7 @@ export const store = configureStore({
   reducer: {
     counter: counterReducer,
     todo: taskReducer,
+    // user : userReducer 
   },
 });
 
